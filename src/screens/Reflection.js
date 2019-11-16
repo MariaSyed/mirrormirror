@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import CanvasDraw from "react-canvas-draw";
 import UndoIcon from "@material-ui/icons/Undo";
-import EraserIcon from "@material-ui/icons/Edit";
 
 const colorPalette = [
   "#C62828",
