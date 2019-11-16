@@ -2,12 +2,14 @@ import React, { useRef, useState } from "react";
 
 const ProfilePic = ({ user }) => (
   <div style={styles.profileItem}>
-    <img
-      src={user.url}
-      alt={"Profile photo of " + user.name}
-      style={{ ...styles.profilePic}}
-    />
-    <h3>{user.name}</h3>
+    {/* <div> */}
+      <img
+        src={user.url}
+        alt={"Profile photo of " + user.name}
+        style={{ ...styles.profilePic}}
+      />
+    {/* </div> */}
+    <h3 style={styles.profileText}>{user.name}</h3>
   </div>
 );
 
@@ -59,7 +61,7 @@ const styles = {
   content: {
     width: 1024,
     height: 768,
-    border: "2px solid red",
+    paddingTop: "3em",
     textAlign: "center"
   },
   input: {
@@ -67,16 +69,29 @@ const styles = {
     outline: "none",
     border: "none",
     borderBottom: "2px solid grey",
-    fontSize: "3em"
+    fontFamily: "Indie Flower",
+    fontSize: 50,
   },
   profileItem: {
-    
+    width: "25%"
+  },
+  profileText: {
+    fontFamily: "Indie Flower",
+    fontSize: 35,
   },
   profileList: {
-    display: "flex"
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "flex-end",
+    justifyContent: "space-evenly",
+    margin: "4em 3em auto 3em"
   },
   profilePic: {
-    width: "100px"
+    width: "100px",
+    border: "5px solid lightgray",
+    padding: "20px",
+    borderRadius: "25%"
   }
 };
 
