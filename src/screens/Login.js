@@ -91,7 +91,8 @@ const styles = {
     width: "100px",
     border: "5px solid lightgray",
     padding: "20px",
-    borderRadius: "25%"
+    borderRadius: "25%",
+    background: "white"
   }
 };
 
