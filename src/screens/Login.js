@@ -71,6 +71,7 @@ const styles = {
     borderBottom: "2px solid grey",
     fontFamily: "Indie Flower",
     fontSize: 50,
+    background: "transparent"
   },
   profileItem: {
     width: "25%"
