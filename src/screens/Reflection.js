@@ -30,31 +30,14 @@ const Reflection = () => {
 
   return (
     <div style={styles.content}>
-      <div style={styles.actionButtons}>
-        <button
-          style={{ ...styles.actionButton, ...styles.undoButton }}
-          onClick={() => canvasRef && canvasRef.current.undo()}
-        >
-          <UndoIcon style={styles.actionIcon} />
-        </button>
-        <button
-          style={{ ...styles.actionButton, ...styles.eraserButton }}
-          onClick={() => {
-            setBrushColor("white");
-            setBrushRadius(10);
-          }}
-        >
-          <EraserIcon style={styles.actionIcon} />
-        </button>
-      </div>
       <CanvasDraw
         ref={canvasRef}
         brushColor={brushColor}
         brushRadius={brushRadius}
         hideGrid
         style={styles.canvas}
-        canvasWidth={"100%"}
-        canvasHeight={700}
+        canvasWidth={780}
+        canvasHeight={530}
       />
       <div style={styles.colorPalette}>
         {colorPalette.map(color => (
@@ -67,6 +50,12 @@ const Reflection = () => {
             }}
           />
         ))}
+        <button
+          style={{ ...styles.actionButton, ...styles.undoButton }}
+          onClick={() => canvasRef && canvasRef.current.undo()}
+        >
+          <UndoIcon style={styles.actionIcon} />
+        </button>
       </div>
     </div>
   );
@@ -74,8 +63,8 @@ const Reflection = () => {
 
 const styles = {
   content: {
-    marginLeft: "auto",
-    marginRight: "auto"
+    width: 777,
+    height: 630
   },
   canvas: {
     padding: 0,
@@ -85,19 +74,17 @@ const styles = {
   },
   colorPalette: {
     marginTop: 10,
-    marginLeft: "auto",
-    marginRight: "auto",
     display: "flex",
     alignItems: "center",
     justifyContent: "center"
   },
   colorButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 60,
+    height: 60,
+    borderRadius: 30,
     border: "none",
     backgroundColor: "black",
-    marginRight: 10,
+    marginRight: 20,
     outline: "none"
   },
   actionButtons: {
@@ -124,8 +111,8 @@ const styles = {
     backgroundColor: "#6A1B9A"
   },
   actionIcon: {
-    width: 30,
-    height: 30,
+    width: 40,
+    height: 40,
     color: "white"
   }
 };
